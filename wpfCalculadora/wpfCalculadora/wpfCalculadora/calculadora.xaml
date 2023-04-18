@@ -1,0 +1,38 @@
+﻿<Window x:Class="wpfCalculadora.calculadora"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfCalculadora"
+        mc:Ignorable="d"
+        Title="calculadora" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/fundo_app.jpg"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="760" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Label FontSize="35" Width="auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" RenderTransformOrigin="0.382,0.54" Grid.ColumnSpan="2" Margin="-78,10,88,140" Grid.RowSpan="2" >Calculadora</Label>
+
+        <TextBox BorderThickness="1" Name="valor1" FontSize="20" TextAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="194,58,504,35" Height="57"></TextBox>
+        <TextBox BorderThickness="1" Name="valor2" FontSize="20" TextAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="328,60,370,33" Height="57"></TextBox>
+
+        <Label Name="resultado" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="2" Margin="194,27,370,17" Foreground="#FF39195C" Background="#FFB8B8B8" Grid.Column="1">Resultado</Label>
+
+        <Button Click="soma" Grid.Column="1" Margin="640,37,56,0" FontSize="40" Background="#FFFEEBFF">+</Button>
+        <Button Click="subtracao" Grid.Row="1" Grid.Column="1" Margin="640,39,56,49" FontSize="40" Background="#FFFEEBFF" RenderTransformOrigin="0.547,-0.145">-</Button>
+        <Button Click="multiplicacao" Grid.Row="1" Grid.Column="1" Margin="640,137,56,50" FontSize="40" Background="#FFFEEBFF" Grid.RowSpan="2">×</Button>
+        <Button Click="divisao" Grid.Row="2" Grid.Column="1" Margin="640,89,56,-52" FontSize="40" Background="#FFFEEBFF">÷</Button>
+    </Grid>
+</Window>
